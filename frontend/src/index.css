@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-omni-dark text-slate-100 antialiased selection:bg-omni-teal selection:text-omni-dark;
+  }
+}
+
+@layer utilities {
+  .glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+  }
+  .glow-teal {
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+  }
+  .glow-red {
+    box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px rgba(0, 180, 216, 0.6);
+  }
+  .text-glow-teal {
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
+  }
+  
+  .glass-panel {
+    @apply bg-omni-card backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+}

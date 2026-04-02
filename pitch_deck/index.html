@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniScan AI - Unified Multimodal Diagnostic Platform</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow top-left"></div>
+    <div class="bg-glow bottom-right"></div>
+    <div class="grid-overlay"></div>
+
+    <div class="presentation-container">
+        <!-- Controls & Progress -->
+        <div class="presentation-header">
+            <div class="logo">
+                <i class="fa-solid fa-wave-square neon-cyan-text"></i> <span class="fw-bold">OmniScan</span> <span class="fw-light">AI</span>
+            </div>
+            <div class="slide-indicator">
+                <span id="current-slide">1</span> / <span id="total-slides">6</span>
+            </div>
+        </div>
+
+        <div class="slides-wrapper">
+
+            <!-- ==============================================
+                 SLIDE 1: TITLE PAGE
+                 ============================================== -->
+            <section class="slide active" id="slide-1">
+                <div class="slide-content grid-2-columns">
+                    <div class="title-section flex-col-center-left">
+                        <div class="badge neon-cyan-badge mb-1">Codecure | SPIRIT 2026, IIT (BHU)</div>
+                        <h1 class="giant-title">OmniScan <span class="neon-teal-text">AI</span></h1>
+                        <h2 class="subtitle glow-text">Unified Multimodal Diagnostic Platform</h2>
+                        
+                        <div class="team-details mt-2">
+                            <h3 class="track-title"><i class="fa-solid fa-microchip neon-yellow-text"></i> AI-Driven Health-Tech Solutions</h3>
+                            <div class="team-info">
+                                <div class="team-card">
+                                    <span class="label">Team</span>
+                                    <span class="value">NOVA</span>
+                                </div>
+                                <div class="team-card">
+                                    <span class="label">Leader</span>
+                                    <span class="value">Rajan Prasad</span>
+                                </div>
+                                <div class="team-card">
+                                    <span class="label">Member</span>
+                                    <span class="value">Aman Kumar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards-section flex-col-center">
+                        <div class="glass-card neon-cyan-border glow-hover fade-in-right stagger-1">
+                            <div class="card-icon"><i class="fa-solid fa-lungs"></i></div>
+                            <div class="card-text">
+                                <h3>Chest X-Ray</h3>
+                                <p>Pneumonia, TB</p>
+                            </div>
+                        </div>
+                        <div class="glass-card neon-yellow-border glow-hover fade-in-right stagger-2">
+                            <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div class="card-text">
+                                <h3>Brain CT</h3>
+                                <p>Hemorrhage, Fracture</p>
+                            </div>
+                        </div>
+                        <div class="glass-card neon-red-border glow-hover fade-in-right stagger-3">
+                            <div class="card-icon"><i class="fa-solid fa-head-side-virus"></i></div>
+                            <div class="card-text">
+                                <h3>Brain MRI</h3>
+                                <p>Tumor, Glioma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 SLIDE 2: THE PROBLEM
+                 ============================================== -->
+            <section class="slide" id="slide-2">
+                <div class="slide-content flex-col-center">
+                    <h2 class="slide-title">The Problem: <span class="neon-red-text">India's Radiology Crisis</span></h2>
+                    
+                    <div class="problem-grid mt-2">
+                        <div class="glass-box neon-red-border focus-effect slide-up stagger-1">
+                            <div class="box-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                            <h3>Radiologist Shortage</h3>
+                            <p>Severe shortage in tier-2, tier-3 cities resulting in massive backlogs.</p>
+                        </div>
+                        <div class="glass-box neon-yellow-border focus-effect slide-up stagger-2">
+                            <div class="box-icon"><i class="fa-regular fa-clock"></i></div>
+                            <h3>Delayed Diagnosis</h3>
+                            <p>Average 24–48 hour turnaround time for critical scans.</p>
+                        </div>
+                        <div class="glass-box neon-red-border focus-effect slide-up stagger-3">
+                            <div class="box-icon"><i class="fa-solid fa-truck-medical"></i></div>
+                            <h3>Emergency Bottleneck</h3>
+                            <p>Critical cases delayed leading to increased mortality risks.</p>
+                        </div>
+                        <div class="glass-box neon-teal-border focus-effect slide-up stagger-4">
+                            <div class="box-icon"><i class="fa-solid fa-house-medical-flag"></i></div>
+                            <h3>Rural Access Gap</h3>
+                            <p>Lack of expert interpretation in remote village healthcare centers.</p>
+                        </div>
+                    </div>
+
+                    <div class="bottom-highlight mt-3 slide-up stagger-5">
+                        <div class="highlight-bar neon-red-bg"></div>
+                        <h3 class="highlight-text">India has ~20,000 radiologists for 1.4 billion people</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 SLIDE 3: OUR SOLUTION
+                 ============================================== -->
+            <section class="slide" id="slide-3">
+                <div class="slide-content full-width">
+                    <h2 class="slide-title text-center">Our Solution: <span class="neon-cyan-text">3 AI Modules</span></h2>
+                    
+                    <div class="modules-grid mt-2">
+                        <!-- Module 1 -->
+                        <div class="module-card glass-card top-border-cyan hover-rise slide-up stagger-1">
+                            <div class="module-header">
+                                <div class="module-icon neon-cyan-text"><i class="fa-solid fa-lungs"></i></div>
+                                <h3>Chest X-Ray</h3>
+                            </div>
+                            <ul class="module-features">
+                                <li><i class="fa-solid fa-check neon-cyan-text"></i> Pneumonia detection</li>
+                                <li><i class="fa-solid fa-check neon-cyan-text"></i> TB detection</li>
+                                <li><i class="fa-solid fa-check neon-cyan-text"></i> Pleural effusion</li>
+                            </ul>
+                            <div class="model-badge">
+                                <span>Model:</span> <strong>DenseNet121</strong>
+                            </div>
+                        </div>
+
+                        <!-- Module 2 -->
+                        <div class="module-card glass-card top-border-yellow hover-rise slide-up stagger-2">
+                            <div class="module-header">
+                                <div class="module-icon neon-yellow-text"><i class="fa-solid fa-brain"></i></div>
+                                <h3>Brain CT</h3>
+                            </div>
+                            <ul class="module-features">
+                                <li><i class="fa-solid fa-check neon-yellow-text"></i> Hemorrhage detection</li>
+                                <li><i class="fa-solid fa-check neon-yellow-text"></i> Fracture analysis</li>
+                                <li><i class="fa-solid fa-check neon-yellow-text"></i> Lesion mapping</li>
+                            </ul>
+                            <div class="model-badge">
+                                <span>Model:</span> <strong>3D U-Net</strong>
+                            </div>
+                        </div>
+
+                        <!-- Module 3 -->
+                        <div class="module-card glass-card top-border-teal hover-rise slide-up stagger-3">
+                            <div class="module-header">
+                                <div class="module-icon neon-teal-text"><i class="fa-solid fa-head-side-virus"></i></div>
+                                <h3>Brain MRI</h3>
+                            </div>
+                            <ul class="module-features">
+                                <li><i class="fa-solid fa-check neon-teal-text"></i> Tumor detection</li>
+                                <li><i class="fa-solid fa-check neon-teal-text"></i> Glioma classification</li>
+                                <li><i class="fa-solid fa-check neon-teal-text"></i> Segmentation</li>
+                            </ul>
+                            <div class="model-badge">
+                                <span>Model:</span> <strong>3D U-Net</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 SLIDE 4: TECHNICAL WORKFLOW
+                 ============================================== -->
+            <section class="slide" id="slide-4">
+                <div class="slide-content flex-col-center">
+                    <h2 class="slide-title">Technical <span class="neon-teal-text">Workflow</span></h2>
+                    
+                    <div class="workflow-container mt-2">
+                        <div class="workflow-step slide-in-left stagger-1">
+                            <div class="step-circle neon-cyan-border shadow-cyan"><i class="fa-solid fa-file-image"></i></div>
+                            <h4>1. DICOM Input</h4>
+                            <p>(X-ray, CT, MRI)</p>
+                        </div>
+                        <div class="workflow-arrow grow-width stagger-2"><div class="line"></div><i class="fa-solid fa-angle-right"></i></div>
+                        
+                        <div class="workflow-step slide-in-bottom stagger-3">
+                            <div class="step-circle neon-teal-border shadow-teal"><i class="fa-solid fa-filter"></i></div>
+                            <h4>2. Preprocessing</h4>
+                            <p>(Normalization, CLAHE)</p>
+                        </div>
+                        <div class="workflow-arrow grow-width stagger-4"><div class="line"></div><i class="fa-solid fa-angle-right"></i></div>
+                        
+                        <div class="workflow-step scale-in stagger-5">
+                            <div class="step-circle neon-yellow-border shadow-yellow"><i class="fa-solid fa-network-wired"></i></div>
+                            <h4>3. AI Inference</h4>
+                            <p>(DenseNet121, 3D U-Net)</p>
+                        </div>
+                        <div class="workflow-arrow grow-width stagger-6"><div class="line"></div><i class="fa-solid fa-angle-right"></i></div>
+                        
+                        <div class="workflow-step slide-in-top stagger-7">
+                            <div class="step-circle neon-red-border shadow-red"><i class="fa-solid fa-fire"></i></div>
+                            <h4>4. Grad-CAM XAI</h4>
+                            <p>(Heatmaps)</p>
+                        </div>
+                        <div class="workflow-arrow grow-width stagger-8"><div class="line"></div><i class="fa-solid fa-angle-right"></i></div>
+                        
+                        <div class="workflow-step slide-in-right stagger-9">
+                            <div class="step-circle neon-cyan-border shadow-cyan"><i class="fa-solid fa-file-medical"></i></div>
+                            <h4>5. Report Output</h4>
+                            <p>(Diagnosis + Priority)</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack-footer fade-in mt-3 stagger-10">
+                        <span class="tech-label">Tech Stack:</span>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">MONAI</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React/Streamlit</span>
+                            <span class="tag">DICOM</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 SLIDE 5: IMPACT & CRITERIA
+                 ============================================== -->
+            <section class="slide" id="slide-5">
+                <div class="slide-content grid-2-columns">
+                    <div class="impact-metrics flex-col-center">
+                        <div class="metric-circle pulse-animation shadow-teal fade-in stagger-1">
+                            <span class="metric-value">3x</span>
+                            <span class="metric-label">Faster Diagnosis</span>
+                        </div>
+                        <div class="metric-row fade-in stagger-2">
+                            <div class="metric-pill neon-cyan-border">
+                                <i class="fa-solid fa-layer-group"></i> 3 Modalities in One
+                            </div>
+                        </div>
+                        <div class="metric-row fade-in stagger-3">
+                            <div class="metric-pill neon-yellow-border">
+                                <i class="fa-solid fa-microscope"></i> Explainable AI (XAI)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="criteria-boxes">
+                        <div class="criteria-box glass-box hover-glow fade-in-left stagger-2">
+                            <div class="criteria-icon neon-cyan-text"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="criteria-content">
+                                <h3>Innovation</h3>
+                                <p>First multimodal diagnostic AI in India</p>
+                            </div>
+                        </div>
+                        <div class="criteria-box glass-box hover-glow fade-in-left stagger-3">
+                            <div class="criteria-icon neon-teal-text"><i class="fa-solid fa-gears"></i></div>
+                            <div class="criteria-content">
+                                <h3>Functionality</h3>
+                                <p>Real-time analysis + heatmaps</p>
+                            </div>
+                        </div>
+                        <div class="criteria-box glass-box hover-glow fade-in-left stagger-4">
+                            <div class="criteria-icon neon-yellow-text"><i class="fa-solid fa-server"></i></div>
+                            <div class="criteria-content">
+                                <h3>Scalability</h3>
+                                <p>Works offline on local hardware</p>
+                            </div>
+                        </div>
+                        <div class="criteria-box glass-box hover-glow fade-in-left stagger-5">
+                            <div class="criteria-icon neon-red-text"><i class="fa-solid fa-earth-asia"></i></div>
+                            <div class="criteria-content">
+                                <h3>Impact</h3>
+                                <p>Helps 1.4B population</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-footer full-width slide-up stagger-6">
+                    <div class="highlight-bar neon-teal-bg"></div>
+                    <h3 class="highlight-text text-center w-100">"Reducing diagnosis time from <span class="neon-red-text">48 hours</span> to <span class="neon-teal-text">minutes</span>"</h3>
+                </div>
+            </section>
+
+            <!-- ==============================================
+                 SLIDE 6: FUTURE ROADMAP
+                 ============================================== -->
+            <section class="slide" id="slide-6">
+                <div class="slide-content flex-col-center">
+                    <h2 class="slide-title">Future <span class="neon-yellow-text">Roadmap</span></h2>
+                    
+                    <div class="roadmap-timeline mt-3">
+                        <div class="timeline-line"></div>
+                        
+                        <div class="timeline-item pop-in stagger-1">
+                            <div class="timeline-dot current pulse-animation"></div>
+                            <div class="timeline-content glass-card neon-cyan-border">
+                                <h3 class="neon-cyan-text">Now</h3>
+                                <p>Working prototype<br><span class="text-muted">(3 modules + XAI)</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item pop-in stagger-2">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card neon-teal-border">
+                                <h3 class="neon-teal-text">Q3 2026</h3>
+                                <p>Smart report generator<br><span class="text-muted">(auto summaries)</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item pop-in stagger-3">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card neon-yellow-border">
+                                <h3 class="neon-yellow-text">Q4 2026</h3>
+                                <p>Mobile app<br><span class="text-muted">(offline rural use)</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item pop-in stagger-4">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content glass-card neon-red-border">
+                                <h3 class="neon-red-text">2027</h3>
+                                <p>HIS integration<br><span class="text-muted">(HL7/FHIR)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-footer absolute-bottom full-width fade-in stagger-5">
+                    <div class="event-footer neon-glow-text">
+                        <span>Team NOVA</span> | <span>Codecure SPIRIT 2026</span> | <span>IIT (BHU)</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Navigation Buttons Bottom -->
+        <div class="nav-controls">
+            <button id="prevBtn" class="nav-button"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <button id="nextBtn" class="nav-button"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

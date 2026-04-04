@@ -1,0 +1,29 @@
+services:
+  # --------------------------------------------------------
+  # 1. AI Service (Python / FastAPI)
+  # --------------------------------------------------------
+  - type: web
+    name: omniscan-ai-service
+    env: python
+    rootDir: ai-service
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+
+  # --------------------------------------------------------
+  # 2. API Gateway Backend (Node.js)
+  # --------------------------------------------------------
+  - type: web
+    name: omniscan-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: AI_SERVICE_URL
+        # Render's internal routing format - ensures backend can talk seamlessly to the AI module without touching public internet
+        value: http://omniscan-ai-service:8000
+      - key: NODE_ENV
+        value: production

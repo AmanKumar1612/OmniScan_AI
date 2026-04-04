@@ -35,8 +35,8 @@ const UploadAnalyze = () => {
     formData.append('modality', modality);
 
     try {
-      // NOTE: Update port if backend runs elsewhere. 
-      const response = await axios.post('http://localhost:5000/api/upload', formData, {
+      // NOTE: Update url if backend runs elsewhere. 
+      const response = await axios.post('https://omniscan-ai-ljhq.onrender.com/api/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       

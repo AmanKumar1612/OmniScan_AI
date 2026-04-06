@@ -60,6 +60,9 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
         console.error('AI Service Exception:', error.message);
         console.log('INFO: AI Service is unreachable. Providing a simulated response for presentation safety.');
         
+        // Fix scoping issue: access modality directly from req.body
+        const fallbackModality = req.body ? req.body.modality : 'xray';
+
         // Mock fallback response for live presentation safety
         const mockNames = {
             'xray': 'Pneumonia',
@@ -68,7 +71,7 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
         };
         
         return res.json({
-            prediction: mockNames[modality] || 'Anomaly',
+            prediction: mockNames[fallbackModality] || 'Anomaly',
             confidence: 0.94,
             heatmap_url: 'https://via.placeholder.com/400x400/0a1226/00e5ff?text=Grad-CAM+Simulated'
         });

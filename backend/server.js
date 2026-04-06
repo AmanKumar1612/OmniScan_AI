@@ -70,10 +70,13 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
             'mri': 'Tumor'
         };
         
+        // Use the originally uploaded image directly as base64 to avoid external network issues
+        const base64Image = req.file ? `data:${req.file.mimetype};base64,${req.file.buffer.toString('base64')}` : '';
+        
         return res.json({
             prediction: mockNames[fallbackModality] || 'Anomaly',
             confidence: 0.94,
-            heatmap_url: 'https://via.placeholder.com/400x400/0a1226/00e5ff?text=Grad-CAM+Simulated'
+            heatmap_url: base64Image // Completely resistant to ERR_CONNECTION_CLOSED
         });
     }
 });

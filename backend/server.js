@@ -22,6 +22,11 @@ app.get('/health', (req, res) => {
     res.json({ status: 'OK', message: 'OmniScan Backend is running' });
 });
 
+// Root route to prevent "Cannot GET /" in browsers
+app.get('/', (req, res) => {
+    res.send('OmniScan AI Backend Gateway is active. Proceed to the frontend to upload scans.');
+});
+
 // Main upload & predict route
 app.post('/api/upload', upload.single('image'), async (req, res) => {
     try {
